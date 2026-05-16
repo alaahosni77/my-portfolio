@@ -1,0 +1,480 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    margin-bottom: 5px; /* reduces space below main heading */
+    font-size: 40px;
+    color: #000000;
+}
+
+h2 {
+    margin-top: 5px; /* controls spacing above subtitle */
+    color: #000000;
+    font-weight: normal;
+}
+
+/* ================= HOME PAGE LAYOUT ================= */
+
+/* Main container splits the screen into two equal parts */
+.main-container {
+    display: flex;
+    height: 100vh; /* full viewport height */
+    width: 100%;
+}
+
+/* Left section contains the image */
+.image-section {
+    flex: 1; /* takes half of the screen */
+}
+
+/* Image styling to cover full section without distortion */
+.image-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Right section contains text and navigation */
+.content-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* centers content vertically */
+    align-items: center; /* centers content horizontally */
+    text-align: center;
+}
+
+/* Main title styling inside content section */
+.content-section h1 {
+    font-size: 51px;
+    color: #000000;
+    margin: 0;
+    padding-bottom: 10px; /* space between title and subtitle */
+}
+
+/* Subtitle styling */
+.content-section h2 {
+    font-size: 25px;
+    color: #000000;
+    margin: 0;
+}
+
+/* Navigation container under text */
+.navigation {
+    margin-top: 30px; /* space between text and buttons */
+}
+
+/* Button styling */
+.navigation button {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 25px;
+    margin: 0 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Button hover effect */
+.navigation button:hover {
+    background-color: #333;
+}
+
+/* ================= ABOUT PAGE ================= */
+
+/* Full page background and spacing */
+.about-page {
+    background: #C0C0C0;
+    padding: 50px;
+    min-height: 100vh;
+}
+
+/* Grid layout for about sections */
+.about-container {
+    max-width: 1400px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    align-items: start;
+}
+
+/* Section title styling */
+.about-card h2 {
+    text-align: center;
+    color: #9cab57;
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-weight: 700;
+
+    /* ensures vertical alignment consistency */
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Image inside about cards */
+.about-card img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    background: #bbb;
+}
+
+/* Text styling inside about cards */
+.about-card p,
+.about-card li {
+    color: #111;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+/* Bold paragraph text */
+.about-card p {
+    font-weight: 700;
+}
+
+/* List spacing */
+.about-card ul {
+    padding-left: 22px;
+}
+
+/* List item spacing */
+.about-card li {
+    margin-bottom: 14px;
+}
+
+/* Bottom navigation links */
+.bottom-nav {
+    max-width: 1400px;
+    margin: 45px auto 0;
+    display: flex;
+    gap: 70px;
+}
+
+/* Bottom nav links style */
+.bottom-nav a {
+    font-size: 22px;
+    color: #542626;
+    text-decoration: underline;
+    transition: .3s;
+}
+
+/* Hover effect for links */
+.bottom-nav a:hover {
+    opacity: .7;
+}
+
+/* Responsive design for tablets */
+@media (max-width: 1200px) {
+    .about-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+    .about-container {
+        grid-template-columns: 1fr;
+    }
+
+    .about-card h2 {
+        font-size: 32px;
+    }
+
+    .bottom-nav {
+        flex-wrap: wrap;
+        gap: 25px;
+    }
+}
+
+/* ================= SKILLS PAGE ================= */
+
+/* Skills page background and spacing */
+.skills-page {
+    background: #cfcfcf;
+    min-height: 100vh;
+    padding: 60px;
+}
+
+/* Main layout for skills section */
+.skills-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+}
+
+/* Skills container box */
+.skills-box {
+    flex: 2;
+    background: #efefef;
+    border: 2px solid #a4b36d;
+    padding: 40px;
+    display: flex;
+    gap: 60px;
+}
+
+/* Column inside skills section */
+.skills-column {
+    flex: 1;
+}
+
+/* Skills title */
+.skills-column h2 {
+    color: #8b9951;
+    font-size: 42px;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+/* Spacing for second section title */
+.second-title {
+    margin-top: 40px;
+}
+
+/* List styling */
+.skills-column ul {
+    padding-left: 25px;
+}
+
+/* List items styling */
+.skills-column li {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #111;
+}
+
+/* Bold text inside skills */
+.skills-column strong {
+    font-weight: 700;
+}
+
+/* Right side container */
+.skills-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Navigation in skills page */
+.skills-nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+
+/* Navigation links */
+.skills-nav a {
+    font-size: 22px;
+    color: #143e45;
+    text-decoration: underline;
+}
+
+/* Image container */
+.skills-image {
+    width: 100%;
+    background: white;
+    padding: 20px;
+}
+
+/* Image styling */
+.skills-image img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 1200px) {
+    .skills-layout {
+        flex-direction: column;
+    }
+
+    .skills-box {
+        flex-direction: column;
+    }
+}
+
+/* ================= EXPERIENCE PAGE ================= */
+
+/* Page background styling */
+body {
+    background-color: #C0C0C0;
+    margin: 0;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    color: #000;
+}
+
+/* Main wrapper layout */
+.main-wrapper {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+/* Projects section styling */
+.projects-section {
+    flex: 3;
+    background-color: #999999;
+    padding: 20px;
+}
+
+/* Sidebar section styling */
+.experience-sidebar {
+    flex: 1;
+    background-color: #999999;
+    padding: 20px;
+}
+
+/* Section titles */
+h2 {
+    color: #8A9A5B;
+    margin-top: 0;
+    font-size: 24px;
+    font-weight: bold;
+    border-bottom: 2px solid #8A9A5B;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+/* Grid layout for projects */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+/* Project title */
+.project h3 {
+    font-size: 1em;
+    color: #222;
+}
+
+/* Project description text */
+.project p {
+    font-size: 0.85em;
+    line-height: 1.4;
+}
+
+/* Lists styling */
+ul {
+    padding-left: 20px;
+}
+
+/* List items spacing */
+li {
+    margin-bottom: 10px;
+    font-size: 0.9em;
+}
+
+/* Links styling */
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+/* Link hover effect */
+a:hover {
+    color: #8A9A5B;
+    text-decoration: underline;
+}
+
+/* Navigation bar container */
+.navbar {
+    background-color: #333;
+    padding: 15px 0;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Navbar list */
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Navbar items */
+.navbar ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+/* Navbar links */
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Navbar hover effect */
+.navbar ul li a:hover {
+    color: #8A9A5B;
+}
+
+/* ================= CONTACT PAGE ================= */
+
+/* Contact page container */
+.contact-page {
+    background-color: #666666;
+    color: #FFFFFF;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 50px;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+/* Main heading */
+.contact-page h1 {
+    color: #FFFFFF;
+    font-size: 37px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+/* Sub heading */
+.contact-page h2 {
+    color: #FFFFFF;
+    font-size: 25px;
+    margin-bottom: 20px;
+    text-decoration: none;
+    border-bottom: none;
+}
+
+/* Paragraph text */
+.contact-page p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+/* Labels */
+.contact-page strong {
+    color: #000000;
+    font-size: 22px;
+    margin-right: 10px;
+}
+
+/* Links */
+.contact-page a {
+    color: #CCCCCC;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Link hover */
+.contact-page a:hover {
+    color: #8A9A5B;
+    text-decoration: underline;
+}
